@@ -1,0 +1,38 @@
+{
+  "name": "@jsy-lang/nodejs",
+  "version": "0.0.1",
+  "description": "NodeJS loader for offside (indention) JSY syntax transpiler to standard JavaScript",
+  "author": "Shane Holloway <shane.holloway@ieee.org>",
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "syntax",
+    "offside",
+    "python",
+    "indention",
+    "indent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsy-lang/jsy-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsy-lang/jsy-nodejs/issues"
+  },
+  "homepage": "https://github.com/jsy-lang/jsy-nodejs#readme",
+  "files": [
+    "code/",
+    "esm/"
+  ],
+  "type": "module",
+  "module": "./jsy.js",
+  "exports": {
+    ".": "./jsy.js"
+  },
+  "dependencies": {
+    "jsy-transpile": "^0.9.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node --loader @jsy-lang/nodejs ./demo.jsy"
+  }
+}
