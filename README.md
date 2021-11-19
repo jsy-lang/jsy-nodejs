@@ -35,3 +35,11 @@ $ export NODE_OPTIONS="--enable-source-maps --loader @jsy-lang/nodejs"
 $ node demo.jsy
 Hello JSY world! { jsy: 'indented', wisp: 'inspiration' }
 ```
+
+## Install
+
+```sh
+$ npm install @jsy-lang/nodejs
+```
+
+Note that global install does not work with loaders. (e.g. `npm install -g` does not work).
