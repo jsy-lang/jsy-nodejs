@@ -12,5 +12,11 @@ console.log @
 EOF
 
 $ node --loader @jsy-lang/nodejs demo.jsy
+Hello JSY world! { jsy: 'indented', wisp: 'inspiration' }
+
+
+$ alias jsy-node="node --loader @jsy-lang/nodejs"
+$ jsy-node demo.jsy
+Hello JSY world! { jsy: 'indented', wisp: 'inspiration' }
 ```
 
