@@ -29,7 +29,7 @@
     ".": "./jsy.js"
   },
   "dependencies": {
-    "jsy-transpile": "^0.9.5"
+    "jsy-transpile": "^0.9.9"
   },
   "devDependencies": {},
   "scripts": {
