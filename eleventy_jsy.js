@@ -1,16 +1,18 @@
+
 export function eleventy_jsy(cfg, opt={}) {
-  let ver = 0
+  let ver=0, base_url=new URL(opt.dir || '.', `file:///${process.cwd()}/`)
+  let jsy_import = src_path => import(new URL(src_path+'?v='+ver, base_url))
   cfg.on('eleventy.before', ()=>{ ver++ })
 
-  const eleventy_jsy = {
+  let eleventy_jsy = {
     read: false,
     async getData(src_path) {
-      let module = await import(src_path+'?v='+ver)
+      let module = await jsy_import(src_path)
       return module.data
         ?? module.default?.data
     },
     async compile(src, src_path) {
-      let module = await import(src_path+'?v='+ver)
+      let module = await jsy_import(src_path)
       return module.render
         ?? module.default?.render
         ?? module.default
