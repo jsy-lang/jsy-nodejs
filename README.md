@@ -13,7 +13,7 @@ console.log @
 EOF
 ```
 
-The use the `--experimental-loader` feature with `@jsy-lang/nodejs`:
+To use the `--experimental-loader` feature with `@jsy-lang/nodejs`:
 
 ```sh
 $ node --loader @jsy-lang/nodejs demo.jsy
