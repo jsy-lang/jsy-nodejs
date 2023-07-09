@@ -50,3 +50,4 @@ export function eleventy_jsy(eleventyConfig, opt={}) {
     return inst
   }
 }
+

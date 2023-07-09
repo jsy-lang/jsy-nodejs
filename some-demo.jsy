@@ -1,5 +1,5 @@
 console.log @
-  "Hello JSY world!"
+  'Hello JSY world!'
   @{}
     jsy: 'indented'
     wisp: 'inspiration'
