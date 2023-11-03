@@ -1,6 +1,6 @@
 {
   "name": "@jsy-lang/nodejs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "NodeJS loader for JSY offside syntax",
   "author": "Shane Holloway <shane.holloway@ieee.org>",
   "license": "BSD-2-Clause",
@@ -19,18 +19,14 @@
     "url": "https://github.com/jsy-lang/jsy-nodejs/issues"
   },
   "homepage": "https://github.com/jsy-lang/jsy-nodejs#readme",
-  "bin": {
-    "jsy-eval": "jsy-eval.sh",
-    "jsy-zx": "jsy-zx.sh"
-  },
   "files": [
     "jsy.js",
     "eleventy_jsy.js"
   ],
   "type": "module",
-  "module": "./jsy.js",
+  "module": "./register.js",
   "exports": {
-    ".": "./jsy.js",
+    ".": "./register.js",
     "./*": "./*"
   },
   "peerDependencies": {
