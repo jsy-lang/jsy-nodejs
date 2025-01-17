@@ -1,6 +1,6 @@
 {
   "name": "@jsy-lang/nodejs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "NodeJS loader for JSY offside syntax",
   "author": "Shane Holloway <shane.holloway@ieee.org>",
   "license": "BSD-2-Clause",
@@ -35,8 +35,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test:jsy": "node --import @jsy-lang/nodejs ./some-demo.jsy",
-    "test:modeline": "node --import @jsy-lang/nodejs ./some-demo.jsy",
+    "test:jsy": "node --import @jsy-lang/nodejs ./test/some-demo.jsy",
+    "test:modeline": "node --import @jsy-lang/nodejs ./test/some-demo.jsy",
     "test": "npm run test:jsy && npm run test:modeline"
   }
 }

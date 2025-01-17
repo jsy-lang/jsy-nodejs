@@ -18,6 +18,7 @@ async function load_jsy(url, context, nextLoad) {
   if (as_jsy) context = { ...context, format: 'module' }
 
   let result = await nextLoad(url, context)
+  if (! result?.source) return result
 
   if (as_jsy || _has_jsy_modeline(pathname, result)) {
     let raw_jsy = result.source.toString('utf-8')
@@ -29,6 +30,9 @@ async function load_jsy(url, context, nextLoad) {
 
 const rx_modeline_jsy_filetype = /^\/\/[^\n]*(\b(?:filetype|ft|mode)\b\s*=\s*jsy\b)/m
 function _has_jsy_modeline(pathname, result) {
+  if (/\/node_modules\//.test(pathname))
+    return false
+
   if (rx_jsy_modeline_paths.test(pathname))
     return rx_modeline_jsy_filetype.test(
       result.source.toString('utf-8'))
